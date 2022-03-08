@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>404</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="page404 page404--black">
+        <div class="line-decor page404__line-decor"><img src="img/decor_page404_blue.png" alt=""/>
+        </div>
+        <div class="atom-pulse page404__atom-pulse">
+          <div class="atom-pulse__inn"><img src="img/atom_bg.png" alt=""/></div>
+        </div>
+        <div class="inner"><a class="page404__logo" href="/"><img src="img/svgs/icon_logo_white.svg" alt=""/></a>
+          <div class="page404__content">
+            <div class="page404__text">
+              <div class="page404__num">4<span class="text-blue4">0</span>4</div>
+              <div class="page404__title">Ошибка!</div>
+              <div class="page404__descr">К сожалению, запрашиваемая <br>Вами страница не найдена...</div>
+            </div>
+            <div class="page404__decor">
+              <svg width="1698" height="855" viewBox="0 0 1698 855" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="line1" d="M1642.89 621.254C1653.46 582.916 1640.74 540.026 1608.52 495.246C1576.29 450.47 1524.61 403.874 1457.43 358.173C1323.08 266.774 1126.81 179.02 900.47 116.592C674.136 54.1638 460.631 28.8939 298.416 38.4915C217.306 43.2904 149.048 56.8052 98.4266 78.7306C47.8003 100.658 14.8909 130.962 4.31634 169.301C-6.25822 207.639 6.46287 250.529 38.6897 295.309C70.9131 340.085 122.591 386.681 189.773 432.381C324.131 523.78 520.401 611.535 746.736 673.963C973.07 736.391 1186.57 761.661 1348.79 752.063C1429.9 747.264 1498.16 733.749 1548.78 711.824C1599.41 689.896 1632.32 659.592 1642.89 621.254Z" stroke="url(#paint0_linear_52_5)" stroke-opacity="0.53"/>
+                <path class="logo1" d="M1607.47 656.341C1601.72 648.901 1598.92 639.595 1599.62 630.214C1600.32 620.834 1604.45 612.042 1611.24 605.532L1625.95 622.669L1624.5 641.686L1607.47 656.341ZM1647.25 669.933L1649.35 642.229L1628.76 640.666L1630.01 624.161L1675.31 627.598C1677.57 643.15 1669.68 663.489 1647.25 669.933ZM1650.91 621.655L1652.7 598.117C1658.01 600.395 1662.74 603.863 1666.51 608.253C1670.28 612.642 1673 617.838 1674.45 623.442L1650.91 621.655ZM1629.02 619.994L1614.31 602.857C1621.84 597.075 1631.24 594.313 1640.7 595.111C1643.43 595.26 1646.12 595.788 1648.7 596.68L1646.83 621.346L1629.02 619.994ZM1610.04 659.333L1627.15 644.734L1644.96 646.085L1643.08 670.751C1637.06 671.61 1630.93 671.022 1625.18 669.037C1619.44 667.051 1614.25 663.725 1610.04 659.333Z" fill="white"/>
+                <defs>
+                <linearGradient id="paint0_linear_52_5" x1="642.979" y1="531.053" x2="119.112" y2="17.5423" gradientUnits="userSpaceOnUse">
+                <stop stop-color="white"/>
+                <stop offset="0.707784" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="page404__btn"><a class="ui-button ui-button--circle" href="/">На главную</a>
+          </div>
+        </div>
+      </main>
+      <div class="popup" id="requestCall" style="display: none;">
+        <div class="popup__wrapper">
+          <div class="contact-us">
+            <div class="contact-us__title">Оставьте  свои контакты и&nbsp;мы свяжемся с Вами!</div>
+            <form class="contact-us__form" action="#">
+              <div class="contact-us__line">
+                <div class="ui-input ui-input--label">
+                  <input id="contactUsName" type="text" placeholder="Имя"/>
+                  <label for="contactUsName">Ваше имя</label>
+                </div>
+              </div>
+              <div class="contact-us__line">
+                <div class="ui-input ui-input--label">
+                  <input class="js-phone" id="contactUsPhone" type="text" placeholder="Телефон"/>
+                  <label for="contactUsPhone">Телефон</label>
+                </div>
+              </div>
+              <div class="contact-us__line">
+                <div class="ui-checkbox">
+                  <input id="requestCallAgree" name="requestCallAgree" type="checkbox"/>
+                  <label for="requestCallAgree">Я принимаю условия <br/><a href="#">политики конфиденциальности</a><span class="ui-checkbox__icon"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="contact-us__submit">
+                <input class="ui-button ui-button--medium" type="submit" value="Заказать звонок"/>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="libs/jquery/jquery.marquee.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/fancybox/fancybox.umd.js"></script>
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/MotionPathPlugin.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

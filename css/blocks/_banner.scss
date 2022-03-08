@@ -1,0 +1,396 @@
+.banner {
+  padding: 40px 0 80px;
+  overflow: hidden;
+  @include media-tablet {
+    padding: 60px 0 45px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 970px;
+    @include media-desktop {
+      min-height: 650px;
+    }
+    @include media-laptop {
+      min-height: 480px;
+    }
+    @include media-tablet {
+      min-height: 210px;
+    }
+  }
+  &__title {
+    position: relative;
+    @include media-desktop {
+      padding-right: 250px;
+    }
+    @include media-laptop {
+      padding-right: 150px;
+    }
+    @include media-tablet {
+      padding-right: 0;
+    }
+  }
+  &__h1 {
+    position: relative;
+    z-index: 1;
+    font: 300 100px/1.2 $font;
+    text-transform: uppercase;
+    @include media-desktop-big {
+      font-size: 90px;
+    }
+    @include media-desktop {
+      font-size: 64px;
+    }
+    @include media-laptop {
+      font-size: 44px;
+    }
+    @include media-tablet {
+      font-size: 24px;
+    }
+    &--size {
+      &-xl {
+        font-size: 132px;
+        @include media-desktop-big {
+          font-size: 110px;
+        }
+        @include media-desktop {
+          font-size: 84px;
+        }
+        @include media-laptop {
+          font-size: 54px;
+        }
+        @include media-tablet {
+          font-size: 23px;
+        }
+      }
+      &-l {
+        font-size: 120px;
+        @include media-desktop-big {
+          font-size: 100px;
+        }
+        @include media-desktop {
+          font-size: 76px;
+        }
+        @include media-laptop {
+          font-size: 50px;
+        }
+        @include media-tablet {
+          font-size: 31px;
+        }
+      }
+      &-s {
+        font-size: 90px;
+        @include media-desktop-big {
+          font-size: 80px;
+        }
+        @include media-desktop {
+          font-size: 56px;
+        }
+        @include media-laptop {
+          font-size: 38px;
+        }
+        @include media-tablet {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  &__descr {
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    margin-top: 70px;
+    padding-left: 110px;
+    font: 300 25px/1.1 $font;
+    @include media-desktop {
+      margin-top: 50px;
+    }
+    @include media-laptop {
+      max-width: 440px;
+      margin-top: 35px;
+      padding-left: 60px;
+      font-size: 18px;
+    }
+    @include media-tablet {
+      padding-left: 30px;
+      font-size: 12px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 90px;
+      height: 1px;
+      background: currentColor;
+      @include media-laptop {
+        width: 40px;
+      }
+      @include media-tablet {
+        width: 20px;
+      }
+    }
+  }
+  &__btn {
+    width: fit-content;
+    margin: 15px 20% 0 auto;
+    @include media-tablet {
+      margin: 10px auto 0;
+    }
+  }
+  &__decor {
+    height: 0;
+    pointer-events: none;
+    &-svg {
+      position: absolute;
+      top: 50%;
+      right: -85px;
+      left: -85px;
+      transform: translateY(-50%);
+      @include media-desktop {
+        left: 0;
+      }
+      @include media-tablet {
+        right: -50px;
+        left: -15px;
+      }
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-text {
+      width: 440px;
+      padding: 5px 0;
+      font: 20px/1.2 $font;
+      color: #fff;
+      background: #1030f9;
+      border-radius: 50%;
+      overflow: hidden;
+      @include media-laptop {
+        width: 250px;
+        font-size: 14px;
+      }
+      @include media-tablet {
+        width: 130px;
+        padding: 2px 0;
+        font-size: 8px;
+      }
+    }
+    &-tr {
+      height: 1.2em;
+      white-space: nowrap;
+      span {
+        display: inline-block;
+        margin: 0 2px;
+      }
+      &:nth-child(1) {
+        margin-left: -200px;
+        @include media-tablet {
+          margin-left: -100px;
+        }
+      }
+      &:nth-child(3) {
+        margin-left: -100px;
+        @include media-tablet {
+          margin-left: -20px;
+        }
+      }
+      &:nth-child(4) {
+        margin-left: -50px;
+        @include media-laptop {
+          display: none;
+        }
+      }
+    }
+  }
+  &--conversion {
+    .banner {
+      &__content {
+        position: relative;
+        min-height: 680px;
+        padding-left: 100px;
+        @include media-desktop {
+          min-height: 580px;
+        }
+        @include media-laptop {
+          min-height: 450px;
+          padding-left: 0;
+        }
+        @include media-tablet {
+          min-height: 210px;
+        }
+      }
+      &__title {
+        position: static;
+        @include media-tablet {
+          position: relative;
+          text-align: center;
+        }
+      }
+      &__descr {
+        @include media-tablet {
+          max-width: 240px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+      &__btn {
+        @include media-tablet {
+          margin-top: 50px;
+        }
+      }
+      &__decor {
+        &-svg {
+          right: 85px;
+          @include media-laptop {
+            right: -85px;
+            left: -20px;
+          }
+          @include media-tablet {
+            left: -50px;
+            transform: translateY(-55%) rotate(-8deg);
+          }
+        }
+      }
+    }
+  }
+  &--contextual-adv,
+  &--full-cycle {
+    .banner {
+      &__title {
+        @include media-tablet {
+          text-align: center;
+        }
+      }
+      &__decor {
+        &-svg {
+          @include media-tablet {
+            right: -85px;
+            left: -50px;
+            transform: translateY(-55%) rotate(-8deg);
+          }
+        }
+      }
+    }
+  }
+  &--target {
+    padding-top: 200px;
+    @include media-desktop {
+      padding-top: 100px;
+    }
+    @include media-laptop {
+      padding-top: 100px;
+    }
+    .banner {
+      &__wrapper {
+        display: flex;
+        @include media-laptop {
+          display: block;
+        }
+      }
+      &__content {
+        flex-shrink: 0;
+        width: 1000px;
+        min-height: 660px;
+        @include media-desktop {
+          width: 740px;
+          min-height: 480px;
+        }
+        @include media-laptop {
+          width: auto;
+        }
+        @include media-tablet {
+          min-height: 210px;
+        }
+      }
+      &__title {
+        margin-right: 40px;
+        @include media-desktop {
+          padding-right: 75px;
+        }
+        @include media-laptop {
+          margin-right: 0;
+          padding-right: 150px;
+        }
+        @include media-tablet {
+          padding-right: 0;
+        }
+      }
+      &__h1 {
+        @include media-tablet {
+          font-size: 28px;
+        }
+      }
+      &__descr {
+        @include media-tablet {
+          max-width: 85%;
+        }
+      }
+      &__decor {
+        &-svg {
+          @include media-tablet {
+            right: -85px;
+            left: -50px;
+            transform: translateY(-55%) rotate(-8deg);
+          }
+        }
+      }
+      &__slideres {
+        display: flex;
+        align-self: flex-start;
+        flex-shrink: 0;
+        @include media-laptop {
+          display: none;
+        }
+      }
+      &__slider {
+        width: 472px;
+        height: 530px;
+        @include media-desktop {
+          width: 380px;
+          height: 426px;
+        }
+        &:nth-child(1) {
+          margin-top: 140px;
+          margin-bottom: 130px;
+          @include media-desktop {
+            margin-top: 100px;
+            margin-bottom: 80px;
+          }
+        }
+        &:nth-child(2) {
+          margin-left: -235px;
+          @include media-desktop {
+            margin-left: -200px;
+          }
+        }
+        &:nth-child(3) {
+          align-self: flex-end;
+          width: 313px;
+          height: 376px;
+          margin-left: -170px;
+          @include media-desktop {
+            width: 240px;
+            height: 288px;
+            margin-left: -140px;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center bottom;
+        }
+      }
+      &__btn {
+        margin: 140px 35% 0 auto;
+        @include media-laptop {
+          margin: 25px auto 0;
+        }
+      }
+    }
+  }
+}

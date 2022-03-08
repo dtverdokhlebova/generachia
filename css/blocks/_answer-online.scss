@@ -1,0 +1,70 @@
+.answer-online {
+  // position: relative;
+  // z-index: 10;
+  padding: 65px 0 110px;
+  text-align: center;
+  @include media-laptop {
+    padding: 55px 0 80px;
+  }
+  @include media-tablet {
+    padding: 45px 0;
+    overflow: hidden;
+  }
+  &__wrapper {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 145px 0;
+    @include media-laptop {
+      margin-bottom: 30px;
+      padding: 115px 0;
+    }
+    @include media-tablet {
+      margin-bottom: 15px;
+      padding: 85px 0;
+    }
+  }
+  &__title {
+    max-width: 1785px;
+    margin: 0 auto;
+    font: 80px/1.1 $font;
+    text-transform: uppercase;
+    @include media-desktop {
+      // max-width: 74%;
+      font-size: 64px;
+    }
+    @include media-laptop {
+      font-size: 36px;
+    }
+    @include media-tablet {
+      font-size: 19px;
+    }
+  }
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: -80px;
+    bottom: 0;
+    left: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    @include media-desktop {
+      right: -20px;
+      left: -20px;
+    }
+    @include media-laptop {
+      right: 0;
+      left: 0;
+    }
+    @include media-tablet {
+      right: -120px;
+      left: -160px;
+      transform: rotate(-8deg);
+    }
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// @import '/node_modules/@fancyapps/ui/dist/fancybox.css';
+// @import '/node_modules/swiper/swiper-bundle.min.css';
+@import 'utils/variables';
+@import 'utils/media';
+@import 'utils/mixins';
+@import 'utils/keyframes';
+@import 'utils/fonts';
+@import './layout';
+
+
+// BLOCKS
+@import './blocks/_ui/ui-button';
+@import './blocks/_ui/ui-checkbox';
+@import './blocks/_ui/ui-h2';
+@import './blocks/_ui/ui-input';
+@import './blocks/_ui/ui-list';
+@import './blocks/_ui/ui-textarea';
+
+@import './blocks/about-company';
+@import './blocks/answer-online';
+@import './blocks/application';
+@import './blocks/atom-pulse';
+@import './blocks/banner';
+@import './blocks/clients';
+@import './blocks/contact-us';
+@import './blocks/conversion';
+@import './blocks/cost';
+@import './blocks/creative-cost';
+@import './blocks/creatives';
+@import './blocks/dev-cost';
+@import './blocks/effectively';
+@import './blocks/footer';
+@import './blocks/gallery-parallax';
+@import './blocks/goals';
+@import './blocks/header';
+@import './blocks/how-work';
+@import './blocks/line-decor';
+@import './blocks/offer';
+@import './blocks/our-work';
+@import './blocks/page404';
+@import './blocks/popup';
+@import './blocks/prices';
+@import './blocks/services';
+@import './blocks/social-adv';
+@import './blocks/solution';
+@import './blocks/stages';
+@import './blocks/timing';
+@import './blocks/what-for';
+
+
+
+

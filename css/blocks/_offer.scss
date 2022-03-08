@@ -1,0 +1,194 @@
+.offer {
+  padding: 100px 0;
+  @include media-laptop {
+    padding: 75px 0;
+  }
+  @include media-tablet {
+    padding: 30px 0;
+  }
+  &__wrapper {
+    padding: 80px 120px 55px 90px;
+    color: $black2;
+    background: #fff;
+    box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    @include lightning;
+    @include media-laptop {
+      padding: 60px 45px 45px;
+    }
+    @include media-tablet {
+      padding: 30px 20px 25px;
+    }
+    &::before {
+      top: -105px;
+      right: -10px;
+      width: 115px;
+      height: 206px;
+      @include media-laptop {
+        top: -50px;
+        width: 55px;
+        height: 100px;
+      }
+      @include media-tablet {
+        top: -32px;
+        right: 5px;
+        width: 32px;
+        height: 58px;
+      }
+    }
+  }
+  &__line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    @include media-laptop {
+      padding: 35px 0;
+    }
+    @include media-tablet {
+      display: block;
+      padding: 15px 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #4a62f1 4.08%, rgba(74, 98, 241, 0.06) 85.25%);
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    &--fl-st {
+      align-items: flex-start;
+    }
+    &--no-border {
+      padding-bottom: 0;
+      &::before {
+        display: none;
+      }
+    }
+    &--border-short {
+      &::before {
+        right: 20%;
+        @include media-tablet {
+          right: 50%;
+        }
+      }
+    }
+    &--plus {
+      padding: 0;
+      @include media-tablet {
+        padding: 25px 0 10px;
+      }
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    margin-right: 50px;
+    @include media-tablet {
+      margin: 0 0 15px;
+    }
+    &-subtitle {
+      margin-bottom: 30px;
+      font: 25px/1.1 $font;
+      text-transform: uppercase;
+      @include media-laptop {
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+      @include media-tablet {
+        margin-bottom: 5px;
+        font-size: 10px;
+      }
+    }
+    &-title {
+      font: 300 50px/1.1 $font;
+      text-transform: uppercase;
+      @include media-laptop {
+        font-size: 28px;
+      }
+      @include media-tablet {
+        font-weight: 400;
+        font-size: 18px;
+      }
+    }
+  }
+  &__price {
+    margin-left: auto;
+    text-transform: uppercase;
+    text-align: right;
+    @include media-tablet {
+      margin-left: 0;
+      text-align: left;
+    }
+    &-old {
+      font: 300 40px/1.1 $font;
+      text-decoration-line: line-through;
+      @include media-laptop {
+        font-size: 24px;
+      }
+      @include media-tablet {
+        font-size: 10px;
+      }
+    }
+    &-new {
+      font: 300 25px/1.1 $font;
+      @include media-laptop {
+        font-size: 18px;
+      }
+      @include media-tablet {
+        font-size: 10px;
+      }
+    }
+    &-val {
+      font-weight: 500;
+      font-size: 60px;
+      @include media-laptop {
+        font-size: 40px;
+      }
+      @include media-tablet {
+        font-size: 22px;
+      }
+    }
+    &-descr {
+      display: block;
+      @include media-tablet {
+        display: inline;
+      }
+    }
+  }
+  &__plus {
+    width: 48px;
+    height: 48px;
+    margin-left: 17%;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='22.7388' x2='48' y2='22.7388' stroke='%234A62F1' stroke-width='3'/%3E%3Cline x1='25.5' y1='0.238892' x2='25.5' y2='48.2389' stroke='%234A62F1' stroke-width='3'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include media-laptop {
+      width: 36px;
+      height: 36px;
+    }
+    @include media-tablet {
+      width: 26px;
+      height: 26px;
+      margin: 0 auto;
+    }
+  }
+  &__foot {
+    margin-top: 70px;
+    font: 300 22px/1.2 $font;
+    @include media-laptop {
+      margin-top: 45px;
+      font-size: 18px;
+    }
+    @include media-tablet {
+      margin-top: 15px;
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.services {
+  position: relative;
+  padding: 150px 0 230px;
+  @include media-laptop {
+    padding: 80px 0 120px;
+  }
+  @include media-tablet {
+    padding: 35px 0 40px;
+  }
+  &__head {
+    margin-bottom: 40px;
+    font: 300 40px/1.1 $font;
+    text-transform: uppercase;
+    @include media-laptop {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+    @include media-tablet {
+      margin-bottom: 5px;
+      font-size: 10px;
+    }
+  }
+  &__list {
+    @include list-num;
+
+    font: 700 95px/1.1 $font;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.44);
+    @include media-desktop {
+      font-size: 80px;
+    }
+    @include media-laptop {
+      font-size: 44px;
+    }
+    @include media-tablet {
+      font-size: 17px;
+      color: #fff;
+    }
+    li {
+      padding: 40px 0;
+      transition: 0.3s;
+      @include media-laptop {
+        padding: 25px 0;
+      }
+      @include media-tablet {
+        padding: 15px 0;
+      }
+      &::before {
+        position: static;
+        display: inline-flex;
+        min-width: 140px;
+        margin-right: 65px;
+        transition: 0.3s;
+        @include media-laptop {
+          min-width: 70px;
+          margin-right: 25px;
+        }
+        @include media-tablet {
+          min-width: 25px;
+          margin-right: 10px;
+          color: $blue;
+        }
+      }
+      &:hover {
+        color: #fff;
+        &::before {
+          color: $blue;
+        }
+      }
+    }
+  }
+  &__atom-pulse {
+    top: -450px;
+    left: 0;
+    width: 800px;
+    justify-content: flex-end;
+    @include media-laptop {
+      top: -250px;
+      right: 0;
+      left: auto;
+      justify-content: flex-start;
+      width: 500px;
+    }
+    @include media-tablet {
+      top: -60px;
+      width: 250px;
+    }
+    .atom-pulse__inn {
+      top: 0;
+      right: 100px;
+      width: 1500px;
+      @include media-laptop {
+        right: auto;
+        width: 1000px;
+      }
+      @include media-tablet {
+        width: 500px;
+      }
+    }
+  }
+  .inner {
+    position: relative;
+    z-index: 5;
+  }
+}

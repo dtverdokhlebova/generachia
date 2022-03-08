@@ -1,0 +1,98 @@
+.how-work {
+  position: relative;
+  &__ui-h2 {
+    max-width: 80%;
+    margin-bottom: 70px;
+    @include media-laptop {
+      margin-bottom: 50px;
+    }
+    @include media-tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    padding: 90px 130px;
+    background: #fff;
+    font: 300 30px/1.3 $font;
+    box-shadow: 8px 4px 31px rgba(0, 0, 0, 0.13);
+    border-radius: 20px;
+    color: $grey;
+    @include lightning;
+    @include media-laptop {
+      padding: 45px 50px;
+      font-size: 24px;
+    }
+    @include media-tablet {
+      padding: 20px;
+      font-size: 12px;
+    }
+    &::before {
+      top: -100px;
+      right: 0;
+      width: 115px;
+      height: 206px;
+      @include media-laptop {
+        top: -50px;
+        width: 55px;
+        height: 100px;
+      }
+      @include media-tablet {
+        display: none;
+      }
+    }
+    &-inn {
+      max-width: 1260px;
+    }
+    p {
+      margin-bottom: 1.3em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__atom-pulse {
+    top: -500px;
+    left: 0;
+    width: 850px;
+    justify-content: flex-end;
+    @include media-laptop {
+      top: -300px;
+      width: 580px;
+    }
+    @include media-tablet {
+      top: -25px;
+      width: 170px;
+    }
+    .atom-pulse__inn {
+      top: 0;
+      right: 100px;
+      width: 1400px;
+      @include media-laptop {
+        width: 900px;
+      }
+      @include media-tablet {
+        right: 0;
+        width: 300px;
+      }
+    }
+  }
+  .inner {
+    position: relative;
+    z-index: 5;
+  }
+  .line-decor {
+    &--left {
+      height: 200%;
+    }
+    &--right {
+      top: -75%;
+      height: 200%;
+      @include media-tablet {
+        top: -45%;
+        display: flex;
+        width: 200px;
+        height: 160%;
+      }
+    }
+  }
+}

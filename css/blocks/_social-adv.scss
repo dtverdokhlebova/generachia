@@ -1,0 +1,97 @@
+.social-adv {
+  position: relative;
+  padding: 100px 0;
+  &__ui-h2 {
+    max-width: 1260px;
+    margin-bottom: 80px;
+    @include media-laptop {
+      margin-bottom: 45px;
+    }
+    @include media-tablet {
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+  }
+  &__list {
+    @include list-num;
+
+    font: 300 45px/1.1 $font;
+    text-transform: uppercase;
+    @include media-desktop {
+      font-size: 32px;
+    }
+    @include media-laptop {
+      font-size: 24px;
+    }
+    @include media-tablet {
+      font-size: 15px;
+    }
+    li {
+      padding: 45px 0 45px 180px;
+      @include media-desktop {
+        padding: 30px 0 30px 120px;
+      }
+      @include media-laptop {
+        padding: 20px 0;
+      }
+      @include media-tablet {
+        padding: 15px 0;
+      }
+      &::before {
+        color: $blue;
+        @include media-laptop {
+          position: static;
+          margin-right: 30px;
+        }
+        @include media-tablet {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  &__atom-pulse {
+    top: -500px;
+    left: 0;
+    width: 850px;
+    justify-content: flex-end;
+    @include media-laptop {
+      top: -300px;
+      width: 580px;
+    }
+    @include media-tablet {
+      top: -25px;
+      width: 170px;
+    }
+    .atom-pulse__inn {
+      top: 0;
+      right: 100px;
+      width: 1400px;
+      @include media-laptop {
+        width: 900px;
+      }
+      @include media-tablet {
+        right: 0;
+        width: 300px;
+      }
+    }
+  }
+  .inner {
+    position: relative;
+    z-index: 5;
+  }
+  .line-decor {
+    &--left {
+      height: 200%;
+    }
+    &--right {
+      top: -75%;
+      height: 200%;
+      @include media-tablet {
+        top: -45%;
+        display: flex;
+        width: 200px;
+        height: 160%;
+      }
+    }
+  }
+}

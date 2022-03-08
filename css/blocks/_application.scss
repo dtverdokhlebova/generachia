@@ -1,0 +1,79 @@
+.application {
+  padding: 80px 0 65px;
+  @include media-tablet {
+    padding: 40px 0 45px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include media-tablet {
+      display: block;
+    }
+  }
+  &__ui-h2 {
+    max-width: 760px;
+    margin-right: 60px;
+    @include media-tablet {
+      max-width: unset;
+      margin-right: 0;
+      margin-bottom: 35px;
+    }
+  }
+  &__form {
+    width: 100%;
+    max-width: 725px;
+  }
+  &__ui {
+    &-input {
+      margin-top: 35px;
+      @include media-tablet {
+        margin-top: 20px;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    &-textarea {
+      margin-top: 75px;
+      @include media-laptop {
+        margin-top: 50px;
+      }
+      @include media-tablet {
+        margin-top: 20px;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  &__submit {
+    position: relative;
+    margin-top: 100px;
+    padding-left: 125px;
+    @include media-laptop {
+      margin-top: 80px;
+      padding-left: 60px;
+    }
+    @include media-tablet {
+      width: fit-content;
+      margin: 50px 30px 0 auto;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 76px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg width='76' height='16' viewBox='0 0 76 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M75.2071 8.46102C75.5976 8.0705 75.5976 7.43733 75.2071 7.04681L68.8431 0.682844C68.4526 0.29232 67.8195 0.29232 67.4289 0.682844C67.0384 1.07337 67.0384 1.70653 67.4289 2.09706L73.0858 7.75391L67.4289 13.4108C67.0384 13.8013 67.0384 14.4345 67.4289 14.825C67.8194 15.2155 68.4526 15.2155 68.8431 14.825L75.2071 8.46102ZM-8.74228e-08 8.75391L74.5 8.75391L74.5 6.75391L8.74228e-08 6.75391L-8.74228e-08 8.75391Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include media-laptop {
+        width: 42px;
+        height: 10px;
+      }
+    }
+  }
+}

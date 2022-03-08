@@ -1,0 +1,29 @@
+.ui-list {
+  line-height: 1.45;
+  li {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc((1.45em - 13px) / 2);
+      left: 0;
+      width: 13px;
+      height: 13px;
+      background: $blue;
+      border-radius: 50%;
+      @include media-tablet {
+        top: calc((1.45em - 10px) / 2);
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  &--marker-current {
+    li {
+      &::before {
+        background: currentColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.about-company {
+  position: relative;
+  padding: 165px 0 190px;
+  @include media-laptop {
+    padding: 100px 0 120px;
+  }
+  @include media-tablet {
+    padding: 55px 0 45px;
+  }
+  &__head {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    margin-bottom: 85px;
+    @include media-laptop {
+      display: block;
+      margin-bottom: 50px;
+    }
+    @include media-tablet {
+      margin-bottom: 35px;
+    }
+  }
+  &__descr {
+    position: relative;
+    max-width: 510px;
+    padding-top: 25px;
+    font: 300 25px/1.32 $font;
+    @include media-desktop {
+      font-size: 22px;
+    }
+    @include media-laptop {
+      max-width: 80%;
+      margin-top: 25px;
+      padding-top: 0;
+      font-size: 20px;
+    }
+    @include media-tablet {
+      margin-top: 15px;
+      font-size: 12px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, #4a62f1 4.08%, rgba(74, 98, 241, 0) 82.74%);
+      @include media-laptop {
+        display: none;
+      }
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    @include media-laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-tablet {
+      gap: 20px;
+    }
+  }
+  &__item {
+    padding: 45px 20px 40px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.17);
+    border-radius: 20px;
+    @include media-laptop {
+      padding: 30px 10px;
+    }
+    @include media-tablet {
+      padding: 12px 10px;
+      border-radius: 14px;
+    }
+    &-num {
+      margin-bottom: 30px;
+      font: 300 120px/1.1 $font;
+      @include media-desktop {
+        font-size: 80px;
+      }
+      @include media-laptop {
+        margin-bottom: 10px;
+        font-size: 64px;
+      }
+      @include media-tablet {
+        margin-bottom: 0;
+        font-size: 45px;
+      }
+    }
+    &-text {
+      font: 300 35px/1.1 $font;
+      @include media-desktop {
+        font-size: 32px;
+      }
+      @include media-laptop {
+        font-size: 24px;
+      }
+      @include media-tablet {
+        font-size: 12px;
+      }
+    }
+  }
+  &__staff {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 180px;
+    margin-top: 220px;
+    @include media-desktop-big {
+      gap: 80px;
+    }
+    @include media-laptop {
+      display: block;
+      margin-top: 120px;
+    }
+    @include media-tablet {
+      margin-top: 50px;
+    }
+  }
+  &__title {
+    margin-bottom: 170px;
+    font: 300 70px/1.2 $font;
+    text-transform: uppercase;
+    @include media-desktop-big {
+      margin-bottom: 120px;
+      font-size: 50px;
+    }
+    @include media-laptop {
+      margin-bottom: 60px;
+      font-size: 38px;
+    }
+    @include media-tablet {
+      margin-bottom: 35px;
+      font-size: 24px;
+    }
+  }
+  &__certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px 20px;
+    @include media-laptop {
+      margin-bottom: 100px;
+    }
+    @include media-tablet {
+      gap: 15px 5px;
+      margin-bottom: 35px;
+    }
+    &-item {
+      box-shadow: 7px 7px 18px rgba(0, 0, 0, 0.25);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__rewards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 45px;
+    @include media-laptop {
+      width: fit-content;
+      margin: 0 auto;
+    }
+    @include media-tablet {
+      gap: 15px;
+    }
+    &-item {
+      @include media-laptop {
+        max-width: 240px;
+      }
+      @include media-tablet {
+        max-width: 90px;
+      }
+    }
+  }
+  &__atom-pulse {
+    top: 0;
+    right: 0;
+    width: 1200px;
+    justify-content: flex-start;
+    @include media-laptop {
+      top: -150px;
+      width: 440px;
+    }
+    @include media-tablet {
+      top: -120px;
+      width: 250px;
+    }
+    .atom-pulse__inn {
+      top: 0;
+      width: 1740px;
+      @include media-laptop {
+        width: 740px;
+      }
+      @include media-tablet {
+        width: 500px;
+      }
+    }
+  }
+  .inner {
+    position: relative;
+    z-index: 5;
+  }
+}

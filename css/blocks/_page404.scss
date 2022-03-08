@@ -1,0 +1,182 @@
+.page404 {
+  padding: 40px 0 65px;
+  overflow: hidden;
+  @include media-tablet {
+    padding-top: 20px;
+  }
+  &__logo {
+    position: relative;
+    z-index: 15;
+    display: block;
+    width: 156px;
+    margin-bottom: 55px;
+    @include media-laptop {
+      width: 140px;
+    }
+    @include media-tablet {
+      width: 72px;
+    }
+  }
+  &__content {
+    position: relative;
+    max-width: 1585px;
+    padding-left: 60px;
+    @include media-laptop {
+      padding-left: 20px;
+    }
+    @include media-tablet {
+      padding-left: 0;
+    }
+  }
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+  &__num {
+    margin-bottom: 80px;
+    font: 700 500px/1.2 $font;
+    @include media-laptop {
+      margin-bottom: 60px;
+      font-size: 300px;
+    }
+    @include media-tablet {
+      margin-bottom: 25px;
+      font-size: 110px;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    font: 300 70px/1.1 $font;
+    @include media-laptop {
+      font-size: 50px;
+    }
+    @include media-tablet {
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+  }
+  &__descr {
+    max-width: 600px;
+    font: 300 40px/1.1 $font;
+    @include media-laptop {
+      font-size: 22px;
+    }
+    @include media-tablet {
+      font-size: 14px;
+    }
+  }
+  &__decor {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    bottom: -40px;
+    left: -120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    @include media-laptop {
+      left: -25px;
+    }
+    @include media-tablet {
+      top: 0;
+      bottom: auto;
+      justify-content: flex-start;
+      width: fit-content;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      @include media-tablet {
+        max-height: 220px;
+      }
+    }
+  }
+  &__btn {
+    position: relative;
+    width: fit-content;
+    margin-right: 28%;
+    margin-left: auto;
+    padding-left: 125px;
+    @include media-laptop {
+      margin-top: 80px;
+      padding-left: 60px;
+    }
+    @include media-tablet {
+      margin: 50px 20% 0 auto;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 76px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg width='76' height='16' viewBox='0 0 76 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M75.2071 8.46102C75.5976 8.0705 75.5976 7.43733 75.2071 7.04681L68.8431 0.682844C68.4526 0.29232 67.8195 0.29232 67.4289 0.682844C67.0384 1.07337 67.0384 1.70653 67.4289 2.09706L73.0858 7.75391L67.4289 13.4108C67.0384 13.8013 67.0384 14.4345 67.4289 14.825C67.8194 15.2155 68.4526 15.2155 68.8431 14.825L75.2071 8.46102ZM-8.74228e-08 8.75391L74.5 8.75391L74.5 6.75391L8.74228e-08 6.75391L-8.74228e-08 8.75391Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include media-laptop {
+        width: 42px;
+        height: 10px;
+      }
+    }
+  }
+  &__line-decor {
+    top: 0;
+    left: -30%;
+    align-items: flex-end;
+    width: 1150px;
+    height: 730px;
+    overflow: visible;
+    @include media-laptop {
+      width: 580px;
+      height: 400px;
+    }
+    @include media-tablet {
+      width: 280px;
+      height: 180px;
+    }
+    img {
+      width: auto;
+      max-width: 150%;
+      animation-name: decor-right;
+    }
+  }
+  &__atom-pulse {
+    top: -550px;
+    right: 0;
+    width: 1100px;
+    @include media-laptop {
+      top: -150px;
+      width: 600px;
+    }
+    @include media-tablet {
+      display: none;
+    }
+    .atom-pulse__inn {
+      top: 0;
+      left: 100px;
+      width: 1540px;
+      @include media-laptop {
+        width: 740px;
+      }
+    }
+  }
+  .inner {
+    position: relative;
+    z-index: 5;
+  }
+  &--black {
+    color: #fff;
+    background: #222626;
+    .page404 {
+      &__btn {
+        &::before {
+          background-image: url("data:image/svg+xml,%3Csvg width='76' height='16' viewBox='0 0 76 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M75.2462 8.3868C75.6367 7.99628 75.6367 7.36311 75.2462 6.97259L68.8822 0.608626C68.4917 0.218101 67.8585 0.218101 67.468 0.608626C67.0775 0.99915 67.0775 1.63231 67.468 2.02284L73.1248 7.67969L67.468 13.3365C67.0775 13.7271 67.0775 14.3602 67.468 14.7508C67.8585 15.1413 68.4917 15.1413 68.8822 14.7508L75.2462 8.3868ZM0.0390624 8.67969L74.5391 8.67969L74.5391 6.67969L0.0390626 6.67969L0.0390624 8.67969Z' fill='white'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+}

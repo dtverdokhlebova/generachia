@@ -1,0 +1,141 @@
+.conversion {
+  position: relative;
+  padding: 80px 0 125px;
+  @include media-tablet {
+    padding: 45px 0;
+  }
+  &__ui-h2 {
+    margin-bottom: 80px;
+    @include media-laptop {
+      margin-bottom: 60px;
+    }
+    @include media-tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__main {
+    max-width: 1230px;
+    margin-bottom: 210px;
+    padding: 75px 95px 65px;
+    font: 300 35px/1.3 $font;
+    color: $grey;
+    background: #fff;
+    box-shadow: 8px 4px 31px rgba(0, 0, 0, 0.13);
+    border-radius: 45px;
+    @include lightning;
+    @include media-laptop {
+      max-width: 95%;
+      margin-bottom: 140px;
+      padding: 45px 50px;
+      font-size: 24px;
+      border-radius: 30px;
+    }
+    @include media-tablet {
+      max-width: unset;
+      margin-bottom: 60px;
+      padding: 20px;
+      font-size: 12px;
+      border-radius: 20px;
+    }
+    &::before {
+      top: -105px;
+      right: -10px;
+      width: 115px;
+      height: 206px;
+      @include media-laptop {
+        top: -50px;
+        width: 55px;
+        height: 100px;
+      }
+      @include media-tablet {
+        top: -32px;
+        right: 5px;
+        width: 32px;
+        height: 58px;
+      }
+    }
+  }
+  &__check-list {
+    display: flex;
+    align-items: center;
+    @include media-tablet {
+      flex-direction: column-reverse;
+    }
+  }
+  &__btn {
+    position: relative;
+    margin-right: 85px;
+    padding-right: 125px;
+    @include media-laptop {
+      margin-right: 45px;
+      padding-right: 70px;
+    }
+    @include media-tablet {
+      margin: 45px 0 0;
+      padding-right: 0;
+      padding-left: 70px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 76px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg width='76' height='16' viewBox='0 0 76 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.396416 8.41073C0.00588992 8.0202 0.00588986 7.38704 0.396416 6.99651L6.76038 0.632551C7.1509 0.242027 7.78406 0.242027 8.17459 0.632551C8.56511 1.02308 8.56511 1.65624 8.17459 2.04677L2.51773 7.70362L8.17459 13.3605C8.56511 13.751 8.56511 14.3842 8.17459 14.7747C7.78407 15.1652 7.1509 15.1652 6.76038 14.7747L0.396416 8.41073ZM75.6035 8.70361L1.10352 8.70362L1.10352 6.70362L75.6035 6.70361L75.6035 8.70361Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include media-laptop {
+        width: 42px;
+        height: 10px;
+      }
+      @include media-tablet {
+        right: auto;
+        left: 0;
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+  &__text {
+    font: 50px/1.4 $font;
+    text-transform: uppercase;
+    @include media-laptop {
+      font-size: 26px;
+    }
+    @include media-tablet {
+      font-size: 13px;
+    }
+  }
+  &__atom-pulse {
+    top: -550px;
+    left: 0;
+    width: 900px;
+    justify-content: flex-end;
+    @include media-laptop {
+      top: -200px;
+      width: 550px;
+    }
+    @include media-tablet {
+      top: -50px;
+      width: 220px;
+    }
+    .atom-pulse__inn {
+      top: 0;
+      right: 100px;
+      width: 1800px;
+      @include media-laptop {
+        width: 1000px;
+      }
+      @include media-tablet {
+        right: 0;
+        width: 380px;
+      }
+    }
+  }
+  .inner {
+    position: relative;
+    z-index: 5;
+  }
+}

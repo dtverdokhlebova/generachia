@@ -1,0 +1,42 @@
+@mixin list-num {
+  list-style-type: none;
+  counter-reset: num;
+  li {
+    position: relative;
+    &::before {
+      content: counter(num);
+      counter-increment: num;
+      position: absolute;
+      left: 0;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #4a62f1 4.08%, rgba(74, 98, 241, 0) 90%);
+    }
+    &:nth-child(-n+9) {
+      &::before {
+        content: '0'counter(num);
+      }
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+@mixin lightning {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg width='115' height='206' viewBox='0 0 115 206' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.490753 109.148L100.187 0.776637L56.8808 85.0506L114.43 98.1753L13.4764 205.071L56.1048 122.393L0.490753 109.148Z' fill='%234A62F1'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

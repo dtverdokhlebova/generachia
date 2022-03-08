@@ -1,0 +1,133 @@
+.ui-button {
+  display: inline-block;
+  padding: 29px 46px;
+  text-align: center;
+  font: 30px/1 $font;
+  color: #fff;
+  background: $blue;
+  border: 1px solid $blue;
+  border-radius: 44px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  @include media-laptop {
+    padding: 20px 30px;
+    font-size: 22px;
+  }
+  @include media-tablet {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  &:hover {
+    color: $blue;
+    background: #fff;
+    border-color: #fff;
+    text-decoration: none;
+  }
+  &--small {
+    padding: 18px 65px;
+  }
+  &--medium {
+    padding: 20px 60px;
+    @include media-tablet {
+      padding: 15px 30px;
+    }
+  }
+  &--ph-big {
+    padding-right: 82px;
+    padding-left: 82px;
+    @include media-laptop {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    @include media-tablet {
+      padding-right: 34px;
+      padding-left: 34px;
+    }
+  }
+  &--empty {
+    font-weight: 300;
+    color: $black;
+    background: transparent;
+    border-color: $black;
+  }
+  &--empty-blue {
+    font-weight: 300;
+    color: $black;
+    background: transparent;
+    border-color: $blue;
+    box-shadow: 3px 4px 9px rgba(0, 0, 0, 0.25);
+  }
+  &--circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
+    padding: 15px;
+    text-transform: uppercase;
+    border-radius: 50%;
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.25);
+    @include media-laptop {
+      width: 160px;
+      height: 160px;
+      padding: 8px;
+    }
+    @include media-tablet {
+      width: 94px;
+      height: 94px;
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+  &--circle-gradient {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
+    padding: 15px;
+    font-weight: 300;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    background: #fff;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.25);
+    @include media-laptop {
+      width: 160px;
+      height: 160px;
+      padding: 8px;
+      font-size: 20px;
+    }
+    @include media-tablet {
+      width: 110px;
+      height: 110px;
+      padding: 5px;
+      font-size: 12px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 2px;
+      background: radial-gradient(96.94% 96.94% at 50.22% 0%, #002aa0 0%, rgba(2, 4, 91, 0.17) 83.08%, rgba(68, 64, 255, 0) 100%);
+      border-radius: inherit;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      transition: 0.3s;
+    }
+    &:hover {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

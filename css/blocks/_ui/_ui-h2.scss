@@ -1,0 +1,13 @@
+.ui-h2 {
+  font: 300 80px/1.1 $font;
+  text-transform: uppercase;
+  @include media-desktop {
+    font-size: 64px;
+  }
+  @include media-laptop {
+    font-size: 44px;
+  }
+  @include media-tablet {
+    font-size: 31px;
+  }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="line-decor line-decor--wrapper"><img src="img/decor5.png" alt=""/>
+      </div>
+      <header class="header">
+        <div class="inner">
+          <div class="header__wrapper"><a class="header__logo" href="/"><img src="img/svgs/icon_logo.svg" alt=""></a>
+            <div class="header__burger">
+              <ul class="header__menu">
+                <li class="header__menu-item"><a class="header__menu-link js-anchor" href="">О нас</a></li>
+                <li class="header__menu-item"><a class="header__menu-link js-anchor" href="">Портфолио</a></li>
+                <li class="header__menu-item"><a class="header__menu-link js-anchor" href="">Как мы работаем</a></li>
+                <li class="header__menu-item"><a class="header__menu-link js-anchor" href="">Контакты</a></li>
+              </ul>
+              <div class="header__request"><a class="ui-button header__ui-button ui-button--empty js-popup" href="#requestCall">Заказать звонок</a>
+              </div>
+            </div>
+            <div class="header__burger-btn"></div>
+          </div>
+        </div>
+        <div class="header-overlay"></div>
+      </header>
+      <main>
+        <div class="inner"><br><a href="main.html">Page 1</a><br><br><a href="main2.html">Page 2</a><br><br><a href="main3.html">Page 3</a><br><br><a href="main4.html">Page 4</a><br><br><a href="main5.html">Page 5</a><br><br><a href="page404-white.html">Page 404 white</a><br><br><a href="page404-black.html">Page 404 black</a></div>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="inner">
+            <div class="footer__top-wrapper"><a class="footer__logo" href="/"><img class="footer__logo-small" src="img/svgs/icon_logo_small.svg" alt=""><img class="footer__logo-big" src="img/svgs/icon_logo.svg" alt=""></a>
+              <ul class="footer__menu">
+                <li class="footer__menu-item"><a class="footer__menu-link js-anchor" href="">О нас</a></li>
+                <li class="footer__menu-item"><a class="footer__menu-link js-anchor" href="">Как мы работаем</a></li>
+                <li class="footer__menu-item"><a class="footer__menu-link js-anchor" href="">Контакты</a></li>
+              </ul><a class="ui-button footer__ui-button ui-button--empty js-popup" href="#requestCall">Заказать звонок</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bot">
+          <div class="inner">
+            <div class="footer__bot-wrapper">
+              <div class="footer__copyright">Сайт носит исключительно информационный характер, и ни при каких условиях не является публичной офертой, определяемой положениями пункта 2 статьи 437 Гражданского кодекса Российской Федерации.</div><a class="footer__policy" href="#">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="popup" id="requestCall" style="display: none;">
+        <div class="popup__wrapper">
+          <div class="contact-us">
+            <div class="contact-us__title">Оставьте  свои контакты и&nbsp;мы свяжемся с Вами!</div>
+            <form class="contact-us__form" action="#">
+              <div class="contact-us__line">
+                <div class="ui-input ui-input--label">
+                  <input id="contactUsName" type="text" placeholder="Имя"/>
+                  <label for="contactUsName">Ваше имя</label>
+                </div>
+              </div>
+              <div class="contact-us__line">
+                <div class="ui-input ui-input--label">
+                  <input class="js-phone" id="contactUsPhone" type="text" placeholder="Телефон"/>
+                  <label for="contactUsPhone">Телефон</label>
+                </div>
+              </div>
+              <div class="contact-us__line">
+                <div class="ui-checkbox">
+                  <input id="requestCallAgree" name="requestCallAgree" type="checkbox"/>
+                  <label for="requestCallAgree">Я принимаю условия <br/><a href="#">политики конфиденциальности</a><span class="ui-checkbox__icon"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="contact-us__submit">
+                <input class="ui-button ui-button--medium" type="submit" value="Заказать звонок"/>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="libs/jquery/jquery.marquee.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/fancybox/fancybox.umd.js"></script>
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/MotionPathPlugin.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

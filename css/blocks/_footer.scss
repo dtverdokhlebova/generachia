@@ -1,0 +1,129 @@
+.footer {
+  &__top {
+    padding: 45px 0;
+    border: 1px solid rgba(65, 65, 65, 0.6);
+    border-width: 1px 0;
+    @include media-laptop {
+      padding: 30px 0;
+    }
+    @include media-tablet {
+      padding: 15px 0;
+    }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      @include media-laptop {
+        justify-content: space-between;
+        align-items: unset;
+        display: grid;
+        grid-template-areas: 'menu logo' 'menu call';
+        gap: 12px 30px;
+      }
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: baseline;
+    &-big {
+      height: 24px;
+      @include media-laptop {
+        height: 18px;
+      }
+      @include media-tablet {
+        height: 8px;
+      }
+    }
+    &-small {
+      height: 31px;
+      margin-right: 10px;
+      @include media-laptop {
+        height: 20px;
+        margin-right: 6px;
+      }
+      @include media-tablet {
+        height: 10px;
+        margin-right: 3px;
+      }
+    }
+  }
+  &__menu {
+    display: flex;
+    margin-left: auto;
+    margin-right: 60px;
+    font: 300 30px/1 $font;
+    @include media-desktop {
+      font-size: 26px;
+    }
+    @include media-laptop {
+      grid-area: menu;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 15px 45px;
+      margin-right: 0;
+      font-size: 20px;
+    }
+    @include media-tablet {
+      gap: 5px 15px;
+      font-size: 12px;
+    }
+    &-item {
+      position: relative;
+      margin-right: 10px;
+      @include media-laptop {
+        margin-right: 0;
+      }
+      &::after {
+        content: '/';
+        margin-left: 10px;
+        @include media-laptop {
+          display: none;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  &__ui-button {
+    min-width: unset;
+    padding: 18px 35px;
+    font-size: 30px;
+    @include media-laptop {
+      grid-area: call;
+      padding: 0;
+      font-size: 20px;
+      border: 0;
+      text-decoration: underline;
+      &:hover {
+        background: none;
+      }
+    }
+    @include media-tablet {
+      font-size: 12px;
+    }
+  }
+  &__bot {
+    padding: 30px 0 65px;
+    font: 300 15px/1.1 $font;
+    color: $grey;
+    @include media-laptop {
+      padding: 20px 0 30px;
+      font-size: 12px;
+    }
+    @include media-tablet {
+      padding: 10px 0 15px;
+      font-size: 8px;
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__copyright {
+    max-width: 630px;
+    margin-right: 60px;
+  }
+}

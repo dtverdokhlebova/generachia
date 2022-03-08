@@ -1,0 +1,62 @@
+.line-decor {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  overflow: hidden;
+  pointer-events: none;
+  img {
+    flex-shrink: 0;
+    width: 200%;
+    max-width: unset;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+  }
+  &--right {
+    top: 0;
+    right: 0;
+    justify-content: flex-start;
+    width: 500px;
+    @include media-laptop {
+      width: 260px;
+    }
+    @include media-tablet {
+      display: none;
+    }
+    img {
+      animation-name: decor-right;
+    }
+  }
+  &--left {
+    top: -150px;
+    left: 0;
+    justify-content: flex-end;
+    width: 570px;
+    height: 140%;
+    @include media-laptop {
+      width: 320px;
+    }
+    @include media-tablet {
+      display: none;
+    }
+    img {
+      animation-name: decor-left;
+    }
+  }
+  &--wrapper {
+    top: 0;
+    left: 0;
+    justify-content: flex-end;
+    width: 700px;
+    @include media-laptop {
+      width: 440px;
+    }
+    @include media-tablet {
+      width: 230px;
+    }
+    img {
+      margin-top: -85%;
+      animation-name: decor-left;
+    }
+  }
+}
