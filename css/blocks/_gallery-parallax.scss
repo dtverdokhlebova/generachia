@@ -33,7 +33,7 @@
   &::after {
     bottom: 0;
     height: 400px;
-    background: linear-gradient(180deg, rgba(248, 248, 248, 0.9) 4.81%, #f8f8f8 100%);
+    background: linear-gradient(0deg, #fff 0%, rgba(248, 248, 248, 0.9) 100%);
     @include media-laptop {
       height: 280px;
     }

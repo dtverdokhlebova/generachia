@@ -89,14 +89,14 @@ function clientsMarquee() {
   const marqueeTime = 30000
   $('.clients__marquee--left').marquee({
     duration: marqueeTime,
-    gap: 5,
+    gap: 0,
     delayBeforeStart: -marqueeTime,
     direction: 'left',
     duplicated: true
   })
   $('.clients__marquee--right').marquee({
     duration: marqueeTime,
-    gap: 5,
+    gap: 0,
     delayBeforeStart: -marqueeTime,
     direction: 'right',
     duplicated: true
@@ -104,14 +104,15 @@ function clientsMarquee() {
 }
 
 function clientsMoreAnim() {
-  const pathItem = '.clients__more-decor .line'
+  const pathItem1 = '.clients__more-decor .line1'
+  const pathItem2 = '.clients__more-decor .line2'
   gsap.to('.clients__more-decor .logo1', {
     duration: 12,
     repeat: -1,
     ease: 'none',
     motionPath: {
-      path: pathItem,
-      align: pathItem,
+      path: pathItem1,
+      align: pathItem1,
       autoRotate: true,
       alignOrigin: [0.5, 0.5]
     }
@@ -121,8 +122,8 @@ function clientsMoreAnim() {
     repeat: -1,
     ease: 'none',
     motionPath: {
-      path: pathItem,
-      align: pathItem,
+      path: pathItem2,
+      align: pathItem2,
       autoRotate: true,
       alignOrigin: [0.5, 0.5],
       start: 1,
@@ -162,41 +163,59 @@ function effectivelyAnim() {
 }
 
 function bannerAnim() {
-  gsap.to('.banner__decor-text', {
-    motionPath: {
-      path: '.banner__decor-svg .line1',
-      align: '.banner__decor-svg .line1',
-      autoRotate: true,
-      // autoRotate: 5,
-      alignOrigin: [0.5, 0.2],
-      start: 0.43,
-      end: 0.43
-    },
-    //   repeat: -1
-    duration: 15,
-    ease: 'none'
-  })
+  setTimeout(() => {
+    gsap.to('.banner__decor-text', {
+      motionPath: {
+        path: '.banner__decor-svg .line1',
+        align: '.banner__decor-svg .line1',
+        autoRotate: true,
+        alignOrigin: [0.5, 0.2],
+        start: 0.43,
+        end: 0.43
+      },
+      duration: 15,
+      ease: 'none'
+    })
+  }, 100);
+  setTimeout(() => {
+    $('.banner__decor-tr--1').marquee({
+      duration: 14000,
+      gap: 0,
+      delayBeforeStart: -14000,
+      direction: 'left',
+      duplicated: true
+    })
+  }, 500);
 
-  const marqueeTime2 = 14000
-  $('.banner__decor-tr').marquee({
-    duration: marqueeTime2,
-    gap: 4,
-    delayBeforeStart: -marqueeTime2,
-    direction: 'left',
-    duplicated: true
-  })
+  setTimeout(() => {
+    $('.banner__decor-tr--2').marquee({
+      duration: 10500,
+      gap: 0,
+      delayBeforeStart: -10500,
+      direction: 'left',
+      duplicated: true
+    })
+  }, 500);
 
-  gsap.to('.banner__decor-svg .logo1', {
-    duration: 15,
-    repeat: -1,
-    ease: 'none',
-    motionPath: {
-      path: '.banner__decor-svg .line1',
-      align: '.banner__decor-svg .line1',
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5]
-    }
-  })
+  setTimeout(() => {
+    $('.banner__decor-tr--3').marquee({
+      duration: 13500,
+      gap: 0,
+      delayBeforeStart: -13500,
+      direction: 'left',
+      duplicated: true
+    })
+  }, 500);
+
+  setTimeout(() => {
+    $('.banner__decor-tr--4').marquee({
+      duration: 11000,
+      gap: 0,
+      delayBeforeStart: -11000,
+      direction: 'left',
+      duplicated: true
+    })
+  }, 500);
 }
 
 function bannerSlider() {

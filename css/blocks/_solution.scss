@@ -65,12 +65,22 @@
         font-weight: 400;
         font-size: 23px;
       }
+      br {
+        @include media-laptop {
+          display: none;
+        }
+      }
     }
     &__descr {
       margin-bottom: 20px;
       font: 300 30px/1.2 $font;
       @include media-desktop {
         font-size: 26px;
+      }
+      br {
+        @include media-laptop {
+          display: none;
+        }
       }
       @include media-tablet {
         margin-bottom: 15px;

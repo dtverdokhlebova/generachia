@@ -162,6 +162,7 @@
       }
     }
     &-text {
+      position: relative;
       width: 440px;
       padding: 5px 0;
       font: 20px/1.2 $font;
@@ -183,26 +184,9 @@
       height: 1.2em;
       white-space: nowrap;
       span {
-        display: inline-block;
-        margin: 0 2px;
-      }
-      &:nth-child(1) {
-        margin-left: -200px;
-        @include media-tablet {
-          margin-left: -100px;
-        }
-      }
-      &:nth-child(3) {
-        margin-left: -100px;
-        @include media-tablet {
-          margin-left: -20px;
-        }
-      }
-      &:nth-child(4) {
-        margin-left: -50px;
-        @include media-laptop {
-          display: none;
-        }
+        box-sizing: unset;
+        display: inline-flex;
+        padding: 0 2px;
       }
     }
   }

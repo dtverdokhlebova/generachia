@@ -255,12 +255,8 @@
       margin-top: auto;
     }
     &__text {
-      max-width: 395px;
       margin-bottom: 65px;
       font: 300 25px/1.15 $font;
-      @include media-desktop-big {
-        max-width: 320px;
-      }
       @include media-desktop {
         margin-bottom: 45px;
         font-size: 18px;

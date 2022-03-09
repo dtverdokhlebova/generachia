@@ -5,6 +5,7 @@
     <title>404</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link  rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="libs/fancybox/fancybox.css" />
     <link rel="stylesheet" href="css/style.min.css">
@@ -48,14 +49,14 @@
             <form class="contact-us__form" action="#">
               <div class="contact-us__line">
                 <div class="ui-input ui-input--label">
-                  <input id="contactUsName" type="text" placeholder="Имя"/>
-                  <label for="contactUsName">Ваше имя</label>
+                  <input id="requestCallName" name="requestCallName" type="text" placeholder="Имя"/>
+                  <label for="requestCallName">Ваше имя</label>
                 </div>
               </div>
               <div class="contact-us__line">
                 <div class="ui-input ui-input--label">
-                  <input class="js-phone" id="contactUsPhone" type="text" placeholder="Телефон"/>
-                  <label for="contactUsPhone">Телефон</label>
+                  <input class="js-phone" id="requestCallPhone" name="requestCallPhone" type="text" placeholder="Телефон"/>
+                  <label for="requestCallPhone">Телефон</label>
                 </div>
               </div>
               <div class="contact-us__line">
@@ -66,7 +67,7 @@
                 </div>
               </div>
               <div class="contact-us__submit">
-                <input class="ui-button ui-button--medium" type="submit" value="Заказать звонок"/>
+                <input id="requestCallSubmit" name="requestCallSubmit" class="ui-button ui-button--medium" type="submit" value="Заказать звонок"/>
               </div>
             </form>
           </div>
