@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   checkInputFill()
   bannerSlider()
   headerBurger()
+  cases()
   clientsMarquee()
   clientsMoreAnim()
   creativesAnim()
@@ -287,6 +288,44 @@ function goals() {
     $(this).siblings(goalsItem).removeClass('prev-active').removeClass('active')
     $(this).addClass('active')
     $(this).siblings(goalsItem).eq(activeIndex - 1).addClass('prev-active')
+  })
+}
+
+function cases() {
+  const tagItem = $('.case-tags__item')
+  tagItem.on('click', function () {
+    $(this).siblings(tagItem).removeClass('active')
+    $(this).addClass('active')
+  })
+
+  if ($('.case-type').length) {
+    const caseTypeSelect = document.querySelectorAll('.case-type__select select')
+    const selectParent = caseTypeOther.parentElement
+    const typeTag = $('.case-type__tag')
+    $(caseTypeSelect).select2({
+      minimumResultsForSearch: Number.POSITIVE_INFINITY,
+      width: 'auto',
+      dropdownAutoWidth: false,
+      dropdownParent: selectParent,
+      placeholder: function (){
+        $(this).data('placeholder');
+      }
+    }).on('select2:select', function (e) {
+      $(this).parents('.case-type').find(typeTag).removeClass('active')
+      $(selectParent).addClass('active')
+    })
+
+    typeTag.on('click', function () {
+      $(this).siblings().removeClass('active')
+      $(this).addClass('active')
+      $(caseTypeSelect).val(null).trigger('change');
+    })
+  }
+
+  const caseItem = $('.case-item')
+  $('.case-list__btn .ui-button').on('click', function () {
+    $(this).parents('.case-list__btn').fadeOut(0)
+    $(this).parents('.case-list').find('.case-item').removeClass('case-item--hidden case-item--mob-hidden')
   })
 }
 
