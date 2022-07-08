@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   bannerSlider()
   headerBurger()
   cases()
+  caseSlider()
   clientsMarquee()
   clientsMoreAnim()
   creativesAnim()
@@ -237,6 +238,19 @@ function bannerSlider() {
       }
     }
   })
+}
+
+function caseSlider() {
+  if ($(window).width() > 767) {
+    const caseSwiper = new Swiper('.case-slider .swiper', {
+      spaceBetween: 70,
+      slidesPerView: 'auto',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+  }
 }
 
 function answerOnlineAnim() {
