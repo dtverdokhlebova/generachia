@@ -193,6 +193,7 @@
       width: 440px;
       padding: 5px 0;
       font: 20px/1.2 $font;
+      text-transform: uppercase;
       color: #fff;
       background: #1030f9;
       border-radius: 50%;
@@ -342,58 +343,52 @@
       }
       &__decor {
         &-svg {
+          @include media-laptop {
+            max-width: 600px;
+          }
           @include media-tablet {
-            right: -85px;
-            left: -50px;
-            transform: translateY(-55%) rotate(-8deg);
+            right: -55px;
+            left: -55px;
           }
         }
       }
       &__slideres {
-        display: flex;
+        position: relative;
         align-self: flex-start;
+        display: flex;
+        align-items: flex-end;
         flex-shrink: 0;
+        padding-top: 280px;
+        @include media-desktop {
+          padding-top: 200px;
+        }
         @include media-laptop {
           display: none;
         }
       }
       &__slider {
-        width: 472px;
-        height: 530px;
+        width: 398px;
+        box-shadow: 6px 4px 14px rgba(0, 0, 0, 0.25);
         @include media-desktop {
-          width: 380px;
-          height: 426px;
-        }
-        &:nth-child(1) {
-          margin-top: 140px;
-          margin-bottom: 130px;
-          @include media-desktop {
-            margin-top: 100px;
-            margin-bottom: 80px;
-          }
+          width: 300px;
         }
         &:nth-child(2) {
-          margin-left: -235px;
+          position: absolute;
+          top: 0;
+          right: 45px;
+          width: 367px;
           @include media-desktop {
-            margin-left: -200px;
+            width: 260px;
           }
         }
         &:nth-child(3) {
-          align-self: flex-end;
-          width: 313px;
-          height: 376px;
-          margin-left: -170px;
+          width: 277px;
+          margin-left: 15px;
+          border-radius: 25px;
+          overflow: hidden;
           @include media-desktop {
-            width: 240px;
-            height: 288px;
-            margin-left: -140px;
+            width: 200px;
           }
-        }
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center bottom;
         }
       }
       &__btn {

@@ -88,7 +88,7 @@
     height: 230px;
     padding: 15px;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 24px;
     text-transform: uppercase;
     color: #2c2c2c;
     background: #fff;
@@ -99,13 +99,13 @@
       width: 160px;
       height: 160px;
       padding: 8px;
-      font-size: 20px;
+      font-size: 16px;
     }
     @include media-tablet {
       width: 110px;
       height: 110px;
       padding: 5px;
-      font-size: 12px;
+      font-size: 10px;
     }
     &::before {
       content: '';

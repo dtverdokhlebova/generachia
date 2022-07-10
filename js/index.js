@@ -2,20 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(MotionPathPlugin)
 
   checkInputFill()
-  bannerSlider()
   headerBurger()
   cases()
+  caseSlider()
   clientsMarquee()
-  clientsMoreAnim()
-  creativesAnim()
-  effectivelyAnim()
-  answerOnlineAnim()
-  page404Anim()
   costWorks()
   anchor()
   ourWork()
   popupScripts()
-  prices()
   goals()
   bannerAnim()
 })
@@ -42,7 +36,7 @@ function ourWork() {
 }
 
 function costWorks() {
-  $('.cost-works__btn .ui-button').on('click', function () {
+  $('.cost-works__btn .js-see-all').on('click', function () {
     $(this).parents('.cost-works__section').find('.cost-works__wrapper').toggleClass('cost-works__wrapper--open')
     $(this).toggleText('Смотреть все', 'Свернуть')
   })
@@ -104,65 +98,6 @@ function clientsMarquee() {
   })
 }
 
-function clientsMoreAnim() {
-  const pathItem1 = '.clients__more-decor .line1'
-  const pathItem2 = '.clients__more-decor .line2'
-  gsap.to('.clients__more-decor .logo1', {
-    duration: 12,
-    repeat: -1,
-    ease: 'none',
-    motionPath: {
-      path: pathItem1,
-      align: pathItem1,
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5]
-    }
-  })
-  gsap.to('.clients__more-decor .logo2', {
-    duration: 10,
-    repeat: -1,
-    ease: 'none',
-    motionPath: {
-      path: pathItem2,
-      align: pathItem2,
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5],
-      start: 1,
-      end: 0
-    }
-  })
-}
-
-function creativesAnim() {
-  gsap.to('.creatives__decor .logo1', {
-    duration: 15,
-    repeat: -1,
-    ease: 'none',
-    motionPath: {
-      path: '.creatives__decor .line1',
-      align: '.creatives__decor .line1',
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5],
-      start: 1,
-      end: 0
-    }
-  })
-}
-
-function effectivelyAnim() {
-  gsap.to('.effectively__decor .logo1', {
-    duration: 15,
-    repeat: -1,
-    ease: 'none',
-    motionPath: {
-      path: '.effectively__decor .line1',
-      align: '.effectively__decor .line1',
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5]
-    }
-  })
-}
-
 function bannerAnim() {
   setTimeout(() => {
     gsap.to('.banner__decor-text', {
@@ -219,66 +154,22 @@ function bannerAnim() {
   }, 500);
 }
 
-function bannerSlider() {
-  const bannerSwiper = new Swiper('.banner__slider', {
-    speed: 400,
-    spaceBetween: 0,
-    slidesPerView: 1,
-    autoplay: true,
-    allowTouchMove: false,
-    effect: 'creative',
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400]
+function caseSlider() {
+  if ($(window).width() > 767) {
+    const caseSwiper = new Swiper('.case-slider .swiper', {
+      spaceBetween: 40,
+      slidesPerView: 'auto',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-      next: {
-        translate: ['100%', 0, 0]
+      breakpoints: {
+        1340: {
+          spaceBetween: 70,
+        }
       }
-    }
-  })
-}
-
-function answerOnlineAnim() {
-  const pathItem = '.answer-online__decor .line1'
-  gsap.to('.answer-online__decor .logo1', {
-    duration: 12,
-    repeat: -1,
-    ease: 'none',
-    motionPath: {
-      path: pathItem,
-      align: pathItem,
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5],
-      start: 1,
-      end: 0
-    }
-  })
-  gsap.to('.answer-online__decor .logo2', {
-    duration: 10,
-    repeat: -1,
-    ease: 'none',
-    motionPath: {
-      path: pathItem,
-      align: pathItem,
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5]
-    }
-  })
-}
-
-function page404Anim() {
-  gsap.to('.page404__decor .logo1', {
-    duration: 15,
-    repeat: -1,
-    ease: 'none',
-    motionPath: {
-      path: '.page404__decor .line1',
-      align: '.page404__decor .line1',
-      autoRotate: true,
-      alignOrigin: [0.5, 0.5]
-    }
-  })
+    })
+  }
 }
 
 function goals() {
@@ -326,13 +217,6 @@ function cases() {
   $('.case-list__btn .ui-button').on('click', function () {
     $(this).parents('.case-list__btn').fadeOut(0)
     $(this).parents('.case-list').find('.case-item').removeClass('case-item--hidden case-item--mob-hidden')
-  })
-}
-
-function prices() {
-  $('.prices-item').on('click', function () {
-    $(this).siblings('.prices-item').removeClass('prices-item--active')
-    $(this).addClass('prices-item--active')
   })
 }
 

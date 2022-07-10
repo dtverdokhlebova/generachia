@@ -29,7 +29,6 @@
     font: 80px/1.1 $font;
     text-transform: uppercase;
     @include media-desktop {
-      // max-width: 74%;
       font-size: 64px;
     }
     @include media-laptop {
@@ -58,13 +57,19 @@
       left: 0;
     }
     @include media-tablet {
-      right: -120px;
-      left: -160px;
-      transform: rotate(-8deg);
+      right: -200px;
+      left: -200px;
     }
-    svg {
-      max-width: 100%;
-      height: auto;
+    &-deskt {
+      @include media-tablet {
+        display: none;
+      }
+    }
+    &-mob {
+      display: none;
+      @include media-tablet {
+        display: block;
+      }
     }
   }
 }

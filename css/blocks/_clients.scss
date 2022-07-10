@@ -65,12 +65,23 @@
       @include media-tablet {
         right: -200px;
         left: -200px;
-        transform: translateY(-50%) rotate(-8deg);
+        transform: translateY(-50%);
         max-height: 280px;
       }
-      svg {
+      &-deskt {
+        @include media-tablet {
+          display: none;
+        }
+      }
+      &-mob {
+        display: none;
+        @include media-tablet {
+          display: block;
+        }
+      }
+      img {
         width: 100%;
-        max-height: inherit;
+        max-height: inherit; 
       }
     }
     .ui-h2 {

@@ -72,9 +72,19 @@
       left: 0;
     }
     @include media-tablet {
-      right: -140px;
-      left: -140px;
-      transform: rotate(-8deg);
+      right: -200px;
+      left: -200px;
+    }
+    &-deskt {
+      @include media-tablet {
+        display: none;
+      }
+    }
+    &-mob {
+      display: none;
+      @include media-tablet {
+        display: block;
+      }
     }
   }
 }

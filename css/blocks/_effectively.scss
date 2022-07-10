@@ -39,10 +39,10 @@
     pointer-events: none;
     @include media-tablet {
       top: 40px;
-      right: -80px;
+      right: -60px;
       bottom: 10px;
-      left: -80px;
-      transform: rotate(-8deg);
+      left: -40px;
+      transform: rotate(-12deg);
     }
   }
   &__atom-pulse {

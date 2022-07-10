@@ -270,8 +270,10 @@
     &__comments {
       display: flex;
       align-items: center;
+      max-width: 400px;
       margin-top: 35px;
       @include media-desktop {
+        max-width: unset;
         margin-top: 25px;
       }
       @include media-tablet {
@@ -301,17 +303,20 @@
     &__picture {
       &-wrap {
         position: relative;
-        padding-top: 100px;
-        padding-right: 100px;
+        display: flex;
+        width: 460px;
+        height: 495px;
         @include media-desktop-big {
-          padding-top: 80px;
-          padding-right: 60px;
+          width: 380px;
+          height: 400px;
         }
         @include media-desktop {
-          padding-top: 45px;
+          width: 295px;
+          height: 310px;
         }
         @include media-tablet {
           width: 100%;
+          height: auto;
           margin-bottom: 20px;
           padding: 0 70px 20px 0;
         }
@@ -327,16 +332,22 @@
         &::before {
           content: '';
           position: absolute;
-          top: calc(100% + 20px);
-          right: 0;
+          top: calc(100% + 90px);
+          right: 35px;
           width: 52px;
           height: 132px;
           background-image: url("data:image/svg+xml,%3Csvg width='52' height='132' viewBox='0 0 52 132' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.715347 0.21432L29.3773 3.65345L12.0679 26.7558L0.715347 0.21432ZM33.4695 128.563C34.1513 127.511 34.8338 126.381 35.5089 125.177L39.8693 127.624C39.1446 128.916 38.4077 130.137 37.6663 131.281L33.4695 128.563ZM39.0366 117.994C40.0423 115.648 40.9882 113.136 41.8408 110.481L46.6015 112.009C45.7005 114.816 44.6994 117.474 43.6323 119.964L39.0366 117.994ZM43.9487 102.721C44.519 100.173 44.9935 97.5299 45.35 94.8049L50.3078 95.4535C49.9312 98.3317 49.4302 101.123 48.828 103.813L43.9487 102.721ZM46.0291 86.8007C46.1312 84.1794 46.1172 81.5009 45.9705 78.7753L50.9633 78.5065C51.1185 81.3907 51.1333 84.2239 51.0253 86.9953L46.0291 86.8007ZM45.1646 70.7955C44.7789 68.2026 44.2661 65.5772 43.6128 62.9274L48.4675 61.7306C49.159 64.5354 49.7019 67.3147 50.1102 70.06L45.1646 70.7955ZM41.3297 55.2311C40.4684 52.7548 39.4769 50.2633 38.3444 47.7628L42.8991 45.7001C44.0941 48.3387 45.1416 50.9704 46.0522 53.5885L41.3297 55.2311ZM34.7174 40.6012C33.432 38.3119 32.0207 36.0191 30.4753 33.7277L34.6205 30.9319C36.2416 33.3354 37.7245 35.7442 39.0772 38.1534L34.7174 40.6012ZM25.7242 27.2353C24.0948 25.1749 22.3496 23.1188 20.4823 21.0708L24.1772 17.7021C26.1219 19.8351 27.943 21.9802 29.6461 24.1339L25.7242 27.2353ZM14.8231 15.2566C12.9314 13.4323 10.9362 11.6171 8.83308 9.81362L12.0879 6.01807C14.2633 7.88356 16.3306 9.76421 18.2939 11.6575L14.8231 15.2566Z' fill='url(%23paint0_linear_0_2815)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_0_2815' x1='10.214' y1='-4.02363' x2='38.8284' y2='124.383' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23586BE1'/%3E%3Cstop offset='1' stop-color='%23F6F7FD'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
           background-size: contain;
           background-repeat: no-repeat;
-          @include media-desktop {
+          @include media-desktop-big {
+            right: 45px;
+            top: calc(100% + 50px);
             width: 40px;
-            height: 100px;
+          }
+          @include media-desktop {
+            top: calc(100% + 20px);
+            right: 0;
+            width: 40px;
           }
           @include media-tablet {
             top: calc(100% + 38px);
@@ -349,10 +360,17 @@
         }
         .goals-item__num {
           position: absolute;
-          bottom: 20px;
-          left: calc(100% + 20px);
+          right: 0;
+          bottom: 0;
+          transform: translateY(calc(100% + 10px));
+          @include media-desktop-big {
+            transform: translateY(100%);
+          }
           @include media-desktop {
+            right: auto;
+            bottom: 20px;
             left: calc(100% + 10px);
+            transform: none;
           }
           @include media-tablet {
             top: 100%;
@@ -365,8 +383,10 @@
     }
     &__img {
       &-big {
-        width: 330px;
-        max-height: 370px;
+        margin-top: auto;
+        width: 352px;
+        max-height: 410px;
+        box-shadow: 6px 7px 22px rgba(0, 0, 0, 0.09);
         @include media-desktop-big {
           width: 280px;
         }
@@ -380,29 +400,60 @@
         }
       }
       &-small {
-        width: 210px;
-        box-shadow: 3px 1px 16px rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        overflow: hidden;
+        width: 184px;
+        box-shadow: 6px 7px 22px rgba(0, 0, 0, 0.09);
+        @include media-desktop-big {
+          width: 155px;
+        }
         @include media-desktop {
-          width: 140px;
+          width: 130px;
         }
         @include media-tablet {
           width: 100px;
         }
-        &--size-l {
-          width: 260px;
-          @include media-desktop {
-            width: 165px;
+        @include media-tablet {
+          width: 75px;
+        }
+        &--size {
+          &-s {
+            width: 174px;
+            @include media-desktop-big {
+              width: 140px;
+            }
+            @include media-tablet {
+              width: 85px;
+            }
           }
-          @include media-tablet {
-            width: 135px;
+          &-l {
+            width: 209px;
+            @include media-desktop-big {
+              width: 160px;
+            }
+            @include media-desktop {
+              width: 140px;
+            }
+            @include media-tablet {
+              width: 80px;
+            }
+          }
+          &-xl {
+            width: 237px;
+            @include media-desktop-big {
+              width: 200px;
+            }
+            @include media-desktop {
+              width: 160px;
+            }
+            @include media-tablet {
+              width: 135px;
+            }
           }
         }
       }
     }
     &__ui-button {
-      @include media-desktop {
+      white-space: nowrap;
+      @include media-desktop-big {
         padding: 16px 30px;
         font-size: 20px;
       }

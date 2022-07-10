@@ -33,15 +33,21 @@
     z-index: 1;
   }
   &__num {
+    position: relative;
     margin-bottom: 80px;
-    font: 700 500px/1.2 $font;
+    font: 700 500px/1 $font;
+    text-align: center;
     @include media-laptop {
       margin-bottom: 60px;
       font-size: 300px;
     }
     @include media-tablet {
-      margin-bottom: 25px;
+      margin-bottom: 40px;
       font-size: 110px;
+    }
+    &-inn {
+      position: relative;
+      z-index: 1;
     }
   }
   &__title {
@@ -67,29 +73,17 @@
   }
   &__decor {
     position: absolute;
-    top: -40px;
-    right: 0;
-    bottom: -40px;
-    left: -120px;
+    top: -0.2em;
+    bottom: -0.4em;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    @include media-laptop {
-      left: -25px;
-    }
-    @include media-tablet {
-      top: 0;
-      bottom: auto;
-      justify-content: flex-start;
-      width: fit-content;
-    }
-    svg {
-      width: 100%;
-      height: auto;
-      @include media-tablet {
-        max-height: 220px;
-      }
+    img {
+      max-width: unset;
+      height: 100%;
     }
   }
   &__btn {
