@@ -48,7 +48,12 @@
     }
   }
   &-main {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 134px;
+    @include media-desktop {
+      gap: 45px;
+    }
     @include media-laptop {
       display: block;
       padding: 0 30px;
@@ -58,24 +63,15 @@
     }
   }
   &-item {
-    flex: 1;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    padding: 75px 45px 30px;
+    padding: 50px 40px 25px;
     background: #fff;
     color: $black;
     box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-    transform: scale(0.85, 0.7);
-    transition: 0.3s;
-    cursor: pointer;
     @include media-desktop {
       padding: 50px 30px 15px;
-    }
-    @include media-laptop {
-      transform: none;
-      cursor: unset;
     }
     @include media-tablet {
       padding: 40px 15px 15px;
@@ -86,15 +82,12 @@
       }
     }
     &__title {
-      margin-bottom: 90px;
+      margin-bottom: 40px;
       font: 500 30px/1.2 $font;
       text-transform: uppercase;
-      @include media-desktop {
-        margin-bottom: 60px;
-        font-size: 20px;
-      }
       @include media-laptop {
         margin-bottom: 45px;
+        font-size: 20px;
       }
       @include media-tablet {
         margin-bottom: 30px;
@@ -102,14 +95,10 @@
       }
     }
     &__ui-list {
-      margin-bottom: 115px;
-      font-size: 25px;
+      margin-bottom: 25px;
+      font-size: 21px;
       text-transform: uppercase;
       transition: 0.3s;
-      @include media-desktop {
-        margin-bottom: 80px;
-        font-size: 20px;
-      }
       @include media-tablet {
         margin-bottom: 60px;
         font-size: 15px;
@@ -127,14 +116,10 @@
       position: relative;
       align-self: center;
       margin-top: auto;
-      margin-bottom: 90px;
-      font: 500 75px/1.5 $font;
+      margin-bottom: 30px;
+      font: 500 50px/1.5 $font;
       text-transform: uppercase;
       @include media-desktop {
-        margin-bottom: 60px;
-        font-size: 58px;
-      }
-      @include media-laptop {
         font-size: 44px;
       }
       @include media-tablet {
@@ -144,10 +129,10 @@
       &::before {
         content: '';
         position: absolute;
-        top: -60px;
-        right: -30px;
-        bottom: -40px;
-        left: -30px;
+        top: -28px;
+        right: -20px;
+        bottom: -35px;
+        left: -20px;
         background-image: url("data:image/svg+xml,%3Csvg width='457' height='205' viewBox='0 0 457 205' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M445.106 66.5417C446.561 74.9609 442.066 84.1083 432.428 93.477C422.804 102.832 408.143 112.313 389.522 121.374C352.287 139.494 299.322 155.883 239.457 166.234C179.593 176.584 124.2 178.93 83.0418 174.364C62.4594 172.081 45.4663 168.073 33.2598 162.492C21.0355 156.904 13.7304 149.796 12.2747 141.377C10.819 132.958 15.3138 123.811 24.952 114.442C34.5761 105.087 49.237 95.6059 67.858 86.5446C105.094 68.4251 158.058 52.0355 217.923 41.685C277.788 31.3346 333.181 28.9894 374.338 33.5548C394.921 35.8379 411.914 39.8461 424.12 45.4266C436.345 51.0153 443.65 58.1225 445.106 66.5417Z' stroke='%231243C8' stroke-opacity='0.6'/%3E%3Cpath d='M30.8683 66.3485C29.4336 75.1428 33.7177 84.5344 42.9066 94.0198C52.0874 103.497 66.0931 112.989 83.8964 121.955C119.498 139.884 170.179 155.658 227.499 165.009C284.819 174.36 337.885 175.512 377.339 169.828C397.069 166.985 413.365 162.436 425.082 156.368C436.809 150.295 443.856 142.752 445.291 133.958C446.725 125.164 442.441 115.772 433.252 106.287C424.072 96.8097 410.066 87.3176 392.263 78.3516C356.661 60.4223 305.98 44.649 248.66 35.2977C191.34 25.9464 138.273 24.7941 98.8199 30.4789C79.0901 33.3217 62.7938 37.8703 51.077 43.9381C39.3499 50.0112 32.303 57.5543 30.8683 66.3485Z' stroke='%231243C8' stroke-opacity='0.15'/%3E%3C/svg%3E%0A");
         background-size: contain;
         background-repeat: no-repeat;
@@ -163,36 +148,22 @@
     &__ui-button {
       align-self: center;
       margin-bottom: 30px;
-      @include media-desktop {
-        padding-right: 60px;
-        padding-left: 60px;
-      }
-      @include media-desktop {
-        padding-right: 40px;
-        padding-left: 40px;
+      padding: 16px 38px;
+      font-size: 25px;
+      @include media-laptop {
+        font-size: 20px;
       }
       @include media-tablet {
-        padding-right: 25px;
-        padding-left: 25px;
+        padding: 10px 25px;
+        font-size: 15px;
       }
     }
     &__note {
+      max-width: 245px;
       min-height: 2.4em;
       font: 300 15px/1.2 $font;
       @include media-tablet {
         font-size: 10px;
-      }
-    }
-    &--active {
-      transform: scale(1);
-      .prices-item__title {
-        font-size: 46px;
-        @include media-desktop {
-          font-size: 32px;
-        }
-        @include media-tablet {
-          font-size: 20px;
-        }
       }
     }
   }
